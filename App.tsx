@@ -8,6 +8,7 @@
 import React from 'react';
 import type {PropsWithChildren} from 'react';
 import {
+  Button,
   SafeAreaView,
   ScrollView,
   StatusBar,
@@ -21,9 +22,11 @@ import {
   Colors,
   DebugInstructions,
   Header,
-  LearnMoreLinks,
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
+
+import {NavigationContainer} from '@react-navigation/native';
+import {createNativeStackNavigator} from '@react-navigation/native-stack';
 
 type SectionProps = PropsWithChildren<{
   title: string;
@@ -55,13 +58,12 @@ function Section({children, title}: SectionProps): JSX.Element {
   );
 }
 
-function App(): JSX.Element {
+function HomeScreen({ navigation }) {
   const isDarkMode = useColorScheme() === 'dark';
 
   const backgroundStyle = {
     backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
   };
-
   return (
     <SafeAreaView style={backgroundStyle}>
       <StatusBar
@@ -76,7 +78,7 @@ function App(): JSX.Element {
           style={{
             backgroundColor: isDarkMode ? Colors.black : Colors.white,
           }}>
-          <Section title="Step One">
+          <Section title="Step One2">
             Edit <Text style={styles.highlight}>App.tsx</Text> to change this
             screen and then come back to see your edits.
           </Section>
@@ -89,10 +91,34 @@ function App(): JSX.Element {
           <Section title="Learn More">
             Read the docs to discover what to do next:
           </Section>
-          <LearnMoreLinks />
+          <Button
+            title="Go to Details"
+            onPress={() => navigation.navigate('Details')}
+          />
         </View>
       </ScrollView>
     </SafeAreaView>
+  );
+}
+
+function DetailsScreen() {
+  return (
+    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+      <Text>Details Screen</Text>
+    </View>
+  );
+}
+
+const Stack = createNativeStackNavigator();
+
+function App(): JSX.Element {
+  return (
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen name="Home" component={HomeScreen} />
+        <Stack.Screen name="Details" component={DetailsScreen} />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 }
 
