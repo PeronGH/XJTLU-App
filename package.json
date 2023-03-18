@@ -6,13 +6,16 @@
     "android": "react-native run-android",
     "ios": "react-native run-ios",
     "ios:dev": "npx react-native run-ios --simulator='iPhone 13 Pro'",
+    "pod:install": "cd ios && pod install && cd ../",
+    "pod:clean": "rm -rf ios/Pods && rm -rf ios/build && rm -rf ios/Podfile.lock && pod cache clean",
+    "clean:android": "cd android && ./gradlew clean && cd ../",
+    "clean:ios": "cd ios && xcodebuild clean && cd ../",
     "lint": "eslint .",
     "start": "react-native start",
-    "test": "jest",
-    "clean:android": "cd android && ./gradlew clean && cd ../",
-    "clean:ios": "cd ios && xcodebuild clean && cd ../"
+    "test": "jest"
   },
   "dependencies": {
+    "@react-native-async-storage/async-storage": "^1.17.12",
     "@react-native-community/masked-view": "^0.1.11",
     "@react-navigation/bottom-tabs": "^6.5.7",
     "@react-navigation/native-stack": "^6.9.12",
@@ -20,10 +23,12 @@
     "react": "18.2.0",
     "react-native": "0.71.4",
     "react-native-gesture-handler": "^2.9.0",
+    "react-native-qrcode-svg": "^6.2.0",
     "react-native-reanimated": "^3.0.2",
     "react-native-safe-area-context": "^3.3.2",
     "react-native-screens": "^3.20.0",
-    "react-native-svg": "^12.1.1"
+    "react-native-svg": "^13.8.0",
+    "react-native-vector-icons": "^9.2.0"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",
