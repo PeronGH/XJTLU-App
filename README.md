@@ -1,10 +1,76 @@
-# XJTLU Unofficial APP 西交利物浦大学非官方应用
+# XJTLU Unofficial APP 西交利物浦大学非官方校园应用
 
-# Tech Stack
+本开源应用旨在满足学生的需求，提供一个**注重隐私**的校园应用。
 
-- [React](https://reactjs.org/) - A JavaScript library for building user interfaces
-- [React Native](https://facebook.github.io/react-native/) - A framework for building native apps using React
-- [zustand](https://docs.pmnd.rs/zustand/) - A tiny (400 bytes) state management library for React
-- [React Navigation](https://reactnavigation.org/) - Routing and navigation for your React Native apps
-- [NativeBase](https://nativebase.io/) - Essential cross-platform UI components for React Native
+这款应用将帮助用户轻松管理课程、作业、活动等方面，同时**充分保护用户的个人信息安全**。
 
+我们欢迎更多的人参与到项目中来，共同打造一个功能齐全、隐私友好的校园应用。
+
+## 主要功能
+
+- [ ] 出入权限：西浦码表、科教惠湖通进出码极速查看。
+- [ ] 课程管理：查看课程表、课程资料，添加、修改、删除课程。
+- [ ] 作业管理：查看作业进度，设置提醒，上传作业文件。
+- [ ] 通知公告：实时获取学校通知、活动信息，支持订阅推送。
+- [ ] 校园活动：浏览即将进行的活动，报名参加，查看活动详情。
+- [ ] 成绩查询：查看学期成绩，统计学分绩点，学术分析。
+- [ ] 校园地图：查看校园地图，快速定位教学楼、食堂等地点。
+
+## 隐私保护
+
+我们将永远不会:
+
+- 连接任何除必要服务外的第三方服务器
+- 收集用户的任何个人信息
+- 通过任何方式获取用户的账号密码
+
+这也意味着:
+
+- 应用中将不会出现任何广告
+
+我们非常注重用户的隐私保护，因此采用以下措施：
+
+- 开源代码：我们的项目完全开源，任何人都可以**审查**我们的代码。
+- 本地加密：用户数据在本地进行加密处理，确保敏感信息不被泄露。
+- 最小权限原则：我们的应用仅申请必要的系统权限，避免不必要的信息收集。
+- 自主选择：用户可以自行选择分享的信息，保护个人隐私。
+
+## 如何参与
+
+我们鼓励大家一起参与项目开发，为此我们编写了完备的注释和开发文档。
+
+开发文档: [开发文档](./docs/README.md)
+
+如果您想参与到项目中来， 请按照以下步骤进行：
+
+1. Fork 项目到你的 GitHub 账号。
+2. 克隆项目到本地，进行修改和开发。
+3. 编写详细的 Commit 信息和 Pull Request 描述，以便我们了解您的修改。
+4. 提交 Pull Request，我们会尽快审查并回复
+
+## License
+
+本项目使用 [GPLv3](./LICENSE-GPL) 开源协议
+
+你可以:
+
+- 任意用途使用软件
+- 学习、修改、改进软件
+- 分发软件或修改版本
+
+你需要:
+
+- 修改或衍生作品需使用 GPLv3 许可
+- 分发软件或修改版本时提供源代码
+- 保留原版权声明和许可信息
+
+你可以在分发软件的时候收费，**但你必须在收费前向你的客户提供该软件的 GNU GPL 许可协议，以便让他们知道，他们可以从别的渠道免费得到这份软件，以及你收费的理由。**
+
+----
+
+**XJTLU APP (Unofficial)** © [XJTLU-Geek](https://github.com/XJTLU-Geek), Released under the [GPLv3](./LICENSE-GPL)
+License.
+Authored and maintained by AprilNEA with help from
+contributors ([list](https://github.com/XJTLU-Geek/XJTLU-App/graphs/contributors)).
+
+> [Website](https://xjtlu.best) · GitHub [@XJTLU-Geek](https://github.com/XJTLU-Geek)
